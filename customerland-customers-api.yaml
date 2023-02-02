@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: CustomersAPI
+  version: 1.0.0
+servers:
+  - url: https://6368a04215219b8496026381.mockapi.io/customerland/v1
+security:
+  - default: []
+paths:
+  /customer:
+    get:
+      parameters: []
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+  '/customer/{customerId}':
+    get:
+      parameters:
+        - name: customerId
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
